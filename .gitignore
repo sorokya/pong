@@ -1,0 +1,5 @@
+# node stuff
+node_modules
+
+# bundle file
+dist/pong.js
