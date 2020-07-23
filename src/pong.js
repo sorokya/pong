@@ -35,13 +35,15 @@ function gameLoop() {
 }
 
 function update() {
-
+    ball.update();
 }
 
 function render(lagOffset) {
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.save();
     ball.render(ctx, lagOffset);
+    ctx.restore();
 }
 
 gameLoop();
