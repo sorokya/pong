@@ -3,5 +3,5 @@ export default {
     GAME_HEIGHT: 600,
     GAME_FPS: 60,
     BALL_SIZE: 5,
-    BALL_VELOCITY: 2
+    BALL_BASE_VELOCITY: 2
 }

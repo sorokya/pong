@@ -10,6 +10,7 @@ export default class Ball {
         this.position = new Vector(Config.GAME_WIDTH / 2 - Config.BALL_SIZE / 2,
                                    Config.GAME_HEIGHT / 2 - Config.BALL_SIZE / 2);
         this.angle = 90;
+        this.velocity = Config.BALL_BASE_VELOCITY;
     }
     render(ctx, lagOffset) {
         ctx.fillStyle = '#fff';
@@ -20,9 +21,9 @@ export default class Ball {
         // TODO: use lagOffset
     }
     update() {
-        let distanceY = Config.BALL_VELOCITY * 
+        let distanceY = this.velocity * 
             Math.cos(Util.DegToRad(this.angle));
-        let distanceX = Config.BALL_VELOCITY * 
+        let distanceX = this.velocity * 
             Math.sin(Util.DegToRad(this.angle));
         this.position.x += distanceX;
         this.position.y += distanceY;
